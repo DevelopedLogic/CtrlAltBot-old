@@ -20,5 +20,6 @@ public class Main{
         Reg.register(new Hello());
         Reg.register(new Shutdown());
         Reg.register(new Announce());
+        Reg.register(new StateControls());
     }
 }
