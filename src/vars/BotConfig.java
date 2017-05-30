@@ -7,7 +7,7 @@ import net.dv8tion.jda.core.AccountType;
 public class BotConfig{
 	//Settings
 	public static final AccountType accType = AccountType.BOT;
-	public static final String token = "";
+	public static final String token = "MzE1NzMyMDQyNjE0NTcxMDA4.DA4Nxg.9W5Xobour-K-kP3xYYw9htbmBQA";
 	public static String prefix = ",";
 	public static boolean StateOnlinePresence = false;
 }
