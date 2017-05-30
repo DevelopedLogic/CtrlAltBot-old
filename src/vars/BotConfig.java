@@ -10,4 +10,5 @@ public class BotConfig{
 	public static final String token = "MzE1NzMyMDQyNjE0NTcxMDA4.DA4Nxg.9W5Xobour-K-kP3xYYw9htbmBQA";
 	public static String prefix = ",";
 	public static boolean StateOnlinePresence = false;
+	public static boolean log = false;
 }

@@ -3,6 +3,7 @@ package main;
 //This is the main class which sets everything up.
 
 import javax.security.auth.login.LoginException;
+import developerEvents.*;
 import events.*;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
@@ -22,5 +23,9 @@ public class Main{
         Reg.register(new Shutdown());
         Reg.register(new Announce());
         Reg.register(new StateControls());
+        Reg.register(new Logger());
+        Reg.register(new LoggingControl());
+        Reg.register(new ForceJoinAndLeaveVoice());
+        Reg.register(new PermissionChecker());
     }
 }
