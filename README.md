@@ -15,13 +15,13 @@ For now, work it out yourself. I *will* add instructions here soon.
 
 *Here is a list of things on my todo list:*
 1. ,snake - Draws a snake on screen with ASCII characters :)
-2. ,!el - Enable Logging <Done>
-3. ,!dl - Disable Logging <Done>
+2. ,!el - Enable Logging *Done*
+3. ,!dl - Disable Logging *Done*
 4. ,!eui - Enable Backend UI
 5. ,!dui - Disable Backend UI
-6. ,!ann - Announce guildwise (This will replace the ,announce command) <Done>
-7. ,!fvcj <Channel ID> - Force VoiceChat Join <Done>
-8. ,!fvcl - Force VoiceChat Leave <Done>
+6. ,!ann - Announce guildwise (This will replace the ,announce command) *Done*
+7. ,!fvcj <Channel ID> - Force VoiceChat Join *Done*
+8. ,!fvcl - Force VoiceChat Leave *Done*
 9. ,-ver - Get Version Number
 10. ,-quit - Exit Backend (This will replace the ,quit command)
 11. ,!cid - Get Channel ID (This will give the ID of the channel the command was run in)
