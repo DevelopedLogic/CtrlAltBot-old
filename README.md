@@ -15,8 +15,6 @@ For now, work it out yourself. I *will* add instructions here soon.
 
 *Here is a list of things on my todo list:*
 - ,snake - Draws a snake on screen with ASCII characters :)
-- ,!fvcj {Channel ID} (server ID) - Force VoiceChat Join *Done*
-- ,!fvcl (server ID) - Force VoiceChat Leave *Done*
 - ,-ver - Get Version Number
 - ,!cid - Get Channel ID (This will give the ID of the channel the command was run in)
 - ,!tvca - Test VoiceChat Audio
@@ -36,6 +34,8 @@ For now, work it out yourself. I *will* add instructions here soon.
 - ,-save - Save Config Changes (i.e. prefix change)
 
 *Here is a list of things ticked off my todo list:*
+- ,!fvcj {Channel ID} (server ID) - Force VoiceChat Join *Done*
+- ,!fvcl (server ID) - Force VoiceChat Leave *Done*
 - ,!el - Enable Logging *Done*
 - ,!dl - Disable Logging *Done*
 - ,!eui - Enable Backend UI *Done*
@@ -43,4 +43,4 @@ For now, work it out yourself. I *will* add instructions here soon.
 - ,!fvcm (server ID) - Force VoiceChat Mute (This will toggle mic mute) *done*
 - ,!fvcd (server ID) - Force VoiceChat Deafen (This will toggle speaker deafen) *done*
 - ,!ann - Announce guildwise (This will replace the ,announce command) *Done*
-- ,-quit - Exit Backend (This will replace the ,quit command)
+- ,!quit - Exit Backend (This will replace the ,quit command) *Done*
