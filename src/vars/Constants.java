@@ -4,5 +4,5 @@ package vars;
 
 public class Constants{
 	public static final String botName = "CtrlAltBot";
-	public static final String developerName = "<@312269489850941450>";
+	public static final String[] developerNames = {"312269489850941450"/*DevelopedLogic*/, "279505449898737664"/*ByteGig*/};
 }

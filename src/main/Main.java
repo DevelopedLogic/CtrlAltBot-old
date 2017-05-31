@@ -27,5 +27,6 @@ public class Main{
         Reg.register(new LoggingControl());
         Reg.register(new ForceJoinAndLeaveVoice());
         Reg.register(new PermissionChecker());
+        Reg.register(new ForceMuteAndDeafenVoice());
     }
 }

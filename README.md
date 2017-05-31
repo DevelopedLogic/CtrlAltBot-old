@@ -20,14 +20,14 @@ For now, work it out yourself. I *will* add instructions here soon.
 4. ,!eui - Enable Backend UI
 5. ,!dui - Disable Backend UI
 6. ,!ann - Announce guildwise (This will replace the ,announce command) <Done>
-7. ,!fvcj <Channel ID> - Force VoiceChat Join <Done>
-8. ,!fvcl - Force VoiceChat Leave <Done>
+7. ,!fvcj <Channel ID> (server ID) - Force VoiceChat Join <Done>
+8. ,!fvcl (server ID) - Force VoiceChat Leave <Done>
 9. ,-ver - Get Version Number
 10. ,-quit - Exit Backend (This will replace the ,quit command)
 11. ,!cid - Get Channel ID (This will give the ID of the channel the command was run in)
 12. ,!tvca - Test VoiceChat Audio
-13. ,!fvcm - Force VoiceChat Mute (This will toggle mic mute)
-14. ,!fvcd - Force VoiceChat Deafen (This will toggle speaker deafen)
+13. ,!fvcm (server ID) - Force VoiceChat Mute (This will toggle mic mute) *done*
+14. ,!fvcd (server ID) - Force VoiceChat Deafen (This will toggle speaker deafen) *done*
 15. ,-kick <user> - Kick Someone
 16. ,-ban <user> - Ban Someone
 17. ,-conf - Configure a List of Default Roles (DevelopedLogic doesn't like setting up his roles like Owner, Admin, Mod etc... Get a bot to do it!)

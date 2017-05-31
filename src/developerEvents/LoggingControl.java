@@ -8,7 +8,14 @@ public class LoggingControl extends ListenerAdapter{
     public void onMessageReceived(MessageReceivedEvent event){
 		String prefix = vars.BotConfig.prefix; //Grab the prefix locally
 		String message = event.getMessage().getContent();
-		if(event.getAuthor().getAsMention().equals(vars.Constants.developerName)){
+		boolean isDeveloper = false;
+		for(String devId:vars.Constants.developerNames){
+            if(devId.equals(event.getAuthor().getId())){
+                isDeveloper = true;
+                break;
+            }
+        }
+		if(isDeveloper){
 			if(message.equals(prefix+"!el")){
 				vars.BotConfig.log = true;
 				event.getChannel().sendMessage("Enabled Chat Logging!").queue();

@@ -1,12 +1,10 @@
 package developerEvents;
 
-//This class manages the force voice chat leave and join commands.
-
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import net.dv8tion.jda.core.managers.AudioManager;
 
-public class ForceJoinAndLeaveVoice extends ListenerAdapter{
+public class ForceMuteAndDeafenVoice extends ListenerAdapter{
 	@Override
     public void onMessageReceived(MessageReceivedEvent event){
 		String prefix = vars.BotConfig.prefix; //Grab the prefix locally
@@ -19,27 +17,39 @@ public class ForceJoinAndLeaveVoice extends ListenerAdapter{
             }
         }
 		if(isDeveloper){
-			if(message[0].equals(prefix+"!fvcj")){
-				if(message.length < 2){
-					event.getChannel().sendMessage("Usage: `,!fvcj <channel ID> (server ID)`").queue();
-					return;
-				}
+			if(message[0].equals(prefix+"!fvcm")){
 				//Join execution
 				if(message.length == 2){
-					AudioManager manager = event.getGuild().getAudioManager();
-					manager.openAudioConnection(event.getGuild().getVoiceChannelById(message[1]));
-				}else{
-					AudioManager manager = vars.Handlers.jdaHandler.getGuildById(message[2]).getAudioManager();
-					manager.openAudioConnection(vars.Handlers.jdaHandler.getGuildById(message[2]).getVoiceChannelById(message[1]));
-				}
-			}else if(message[0].equals(prefix+"!fvcl")){
-				//Leave execution
-				if(message.length == 1){
-					AudioManager manager = event.getGuild().getAudioManager();
-					manager.closeAudioConnection();	
-				}else{
 					AudioManager manager = vars.Handlers.jdaHandler.getGuildById(message[1]).getAudioManager();
-					manager.closeAudioConnection();
+					if(manager.isSelfMuted()){
+						manager.setSelfMuted(false);
+					}else{
+						manager.setSelfMuted(true);
+					}
+				}else{
+					AudioManager manager = event.getGuild().getAudioManager();
+					if(manager.isSelfMuted()){
+						manager.setSelfMuted(false);
+					}else{
+						manager.setSelfMuted(true);
+					}
+				}
+			}else if(message[0].equals(prefix+"!fvcd")){
+				//Join execution
+				if(message.length == 2){
+					AudioManager manager = vars.Handlers.jdaHandler.getGuildById(message[1]).getAudioManager();
+					if(manager.isSelfDeafened()){
+						manager.setSelfDeafened(false);
+					}else{
+						manager.setSelfDeafened(true);
+					}
+				}else{
+					AudioManager manager = event.getGuild().getAudioManager();
+					if(manager.isSelfDeafened()){
+						manager.setSelfDeafened(false);
+					}else{
+						manager.setSelfDeafened(true);
+					}
 				}
 			}
 		}
