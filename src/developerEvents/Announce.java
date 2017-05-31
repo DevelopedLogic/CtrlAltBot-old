@@ -15,7 +15,14 @@ public class Announce extends ListenerAdapter{
 		String prefix = vars.BotConfig.prefix; //Grab the prefix locally
 		String[] message = event.getMessage().getContent().split(" "); //Split the message up into arguments
 		String compiled = ""; //Make an empty string
-		if(event.getAuthor().getAsMention().equals(vars.Constants.developerName)){
+		boolean isDeveloper = false;
+		for(String devId:vars.Constants.developerNames){
+            if(devId.equals(event.getAuthor().getId())){
+                isDeveloper = true;
+                break;
+            }
+        }
+		if(isDeveloper){
 			if(message[0].equals(prefix+"!ann")){
 				if(message.length < 2){
 					event.getChannel().sendMessage("Usage: `"+prefix+"!ann <word> (word) (word)...`").queue(); //Have a go at the user for improper syntax

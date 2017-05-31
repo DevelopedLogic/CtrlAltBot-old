@@ -17,7 +17,6 @@ public class Hello extends ListenerAdapter{
 	        eb.setDescription("Hello "+event.getAuthor().getAsMention()); //Set the contents of the fancy embed box
 	        eb.setColor(new Color(255, 0, 0)); //Set the stripe colour of the fancy embed box
 			event.getChannel().sendMessage(eb.build()).queue(); //Send the fancy embed box as a message
-			System.out.println(event.getAuthor().getAsMention());
 		}
     }
 }
