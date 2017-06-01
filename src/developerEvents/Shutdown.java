@@ -1,4 +1,4 @@
-package events;
+package developerEvents;
 
 //this class manages the shutdown command for the bot.
 

@@ -23,15 +23,19 @@ public class ForceMuteAndDeafenVoice extends ListenerAdapter{
 					AudioManager manager = vars.Handlers.jdaHandler.getGuildById(message[1]).getAudioManager();
 					if(manager.isSelfMuted()){
 						manager.setSelfMuted(false);
+						event.getChannel().sendMessage("Unmuted myself on server "+vars.Handlers.jdaHandler.getGuildById(message[1]).getName()).queue();
 					}else{
 						manager.setSelfMuted(true);
+						event.getChannel().sendMessage("Muted myself on server "+vars.Handlers.jdaHandler.getGuildById(message[1]).getName()).queue();
 					}
 				}else{
 					AudioManager manager = event.getGuild().getAudioManager();
 					if(manager.isSelfMuted()){
 						manager.setSelfMuted(false);
+						event.getChannel().sendMessage("Unmuted myself on server "+event.getGuild().getName()).queue();
 					}else{
 						manager.setSelfMuted(true);
+						event.getChannel().sendMessage("Muted myself on server "+event.getGuild().getName()).queue();
 					}
 				}
 			}else if(message[0].equals(prefix+"!fvcd")){
@@ -40,15 +44,19 @@ public class ForceMuteAndDeafenVoice extends ListenerAdapter{
 					AudioManager manager = vars.Handlers.jdaHandler.getGuildById(message[1]).getAudioManager();
 					if(manager.isSelfDeafened()){
 						manager.setSelfDeafened(false);
+						event.getChannel().sendMessage("Undeafened myself on server "+vars.Handlers.jdaHandler.getGuildById(message[1]).getName()).queue();
 					}else{
 						manager.setSelfDeafened(true);
+						event.getChannel().sendMessage("Deafened myself on server "+vars.Handlers.jdaHandler.getGuildById(message[1]).getName()).queue();
 					}
 				}else{
 					AudioManager manager = event.getGuild().getAudioManager();
 					if(manager.isSelfDeafened()){
 						manager.setSelfDeafened(false);
+						event.getChannel().sendMessage("Undeafened myself on server "+event.getGuild().getName()).queue();
 					}else{
 						manager.setSelfDeafened(true);
+						event.getChannel().sendMessage("Deafened myself on server "+event.getGuild().getName()).queue();
 					}
 				}
 			}

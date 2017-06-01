@@ -4,6 +4,7 @@ package main;
 
 import javax.security.auth.login.LoginException;
 import developerEvents.*;
+import developerEvents.Shutdown;
 import events.*;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
@@ -30,5 +31,6 @@ public class Main{
         Reg.register(new ForceMuteAndDeafenVoice());
         Reg.register(new EnableAndDisableBackendUI());
         Reg.register(new ChannelIDGetter());
+        Reg.register(new EasterEggs());
     }
 }
